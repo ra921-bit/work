@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>财务处工作周报 · 王菊艳 · 2026.10.23</title>
+</head>
+<body style="margin:0;background:#2E2820;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2vh 0">
+
+<style>
+.retro-deck{--cream:#F7F1E3;--card:#FDFAF2;--ink:#3E332A;--soft:#8A7A66;--terra:#B4552F;
+--mustard:#C29435;--olive:#6E7048;--teal:#4C6B63;--tan:#E9DCC0;--line:#D8CBAE;
+position:relative;width:min(96vw,calc(96vh*16/9));aspect-ratio:16/9;margin:0 auto;
+background:var(--cream);font-family:"Noto Sans SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+color:var(--ink);overflow:hidden;box-shadow:0 12px 40px rgba(62,51,42,.25);font-size:clamp(9px,1.15vw,18px)}
+.retro-deck .slide{position:absolute;inset:0;padding:4.5% 5.5%;opacity:0;visibility:hidden;
+transform:translateX(3em);transition:opacity .55s ease,transform .55s ease,visibility 0s linear .55s}
+.retro-deck .slide.active{opacity:1;visibility:visible;transform:none;transition:opacity .55s ease,transform .55s ease}
+.retro-deck .slide.exit-left{transform:translateX(-3em)}
+.retro-deck .kicker{display:flex;align-items:center;gap:.8em;color:var(--soft);letter-spacing:.35em;
+font-size:.72em;margin-bottom:1.2em}
+.retro-deck .kicker::before{content:"";width:.55em;height:.55em;background:var(--terra)}
+.retro-deck h1,.retro-deck h2,.retro-deck .serif{font-family:"Noto Serif SC","Noto Serif CJK SC","Songti SC","SimSun",serif}
+.retro-deck h2{font-size:2.1em;font-weight:700;margin:0;color:var(--ink)}
+.retro-deck .en{color:var(--terra);letter-spacing:.4em;font-size:.68em;margin-top:.5em}
+.retro-deck .rule{width:4.5em;height:.18em;background:var(--terra);margin-top:.9em;border:0}
+.retro-deck .foot{position:absolute;left:5.5%;right:5.5%;bottom:3.5%;display:flex;justify-content:space-between;
+color:var(--soft);font-size:.62em;letter-spacing:.25em;border-top:1px solid var(--line);padding-top:.9em}
+.retro-deck .grid{display:grid;gap:1.1em;margin-top:1.8em}
+.retro-deck .card{background:var(--card);border:1px solid var(--line);border-radius:.5em;padding:1.3em 1.2em;
+box-shadow:0 .35em 1em rgba(62,51,42,.14);position:relative}
+.retro-deck .card::before{content:"";display:block;width:1.7em;height:.22em;margin-bottom:.8em;background:var(--ac,var(--terra))}
+.retro-deck .num{font-family:"Noto Serif SC","Noto Serif CJK SC",serif;font-weight:700;font-size:2.9em;color:var(--ac,var(--terra));line-height:1}
+.retro-deck .num small{font-size:.38em;font-family:"Noto Sans SC",sans-serif;color:var(--soft)}
+.retro-deck .lbl{font-weight:700;font-size:.95em;margin-top:.55em}
+.retro-deck .sub{color:var(--soft);font-size:.68em;margin-top:.4em;line-height:1.55}
+.retro-deck .row{display:grid;grid-template-columns:2.4em 1fr auto;gap:1em;align-items:center;
+padding:.78em 0;border-bottom:1px solid var(--line)}
+.retro-deck .idx{width:2.1em;height:2.1em;display:flex;align-items:center;justify-content:center;
+background:var(--ac,var(--terra));color:var(--card);font-family:"Noto Serif SC",serif;font-weight:700}
+.retro-deck .row b{font-size:.92em}
+.retro-deck .row .d{color:var(--soft);font-size:.66em;margin-top:.25em}
+.retro-deck .rnum{font-family:"Noto Serif SC",serif;font-weight:700;font-size:1.7em;color:var(--ac,var(--terra))}
+.retro-deck .rnum small{font-size:.5em;font-family:"Noto Sans SC",sans-serif;color:var(--soft)}
+.retro-deck .bar-row{display:grid;grid-template-columns:7.5em 1fr 3.5em;gap:.9em;align-items:center;margin:.52em 0}
+.retro-deck .bar-row span{font-size:.72em}
+.retro-deck .bar-row .val{text-align:right;font-family:"Noto Serif SC",serif;font-weight:700;color:var(--ink)}
+.retro-deck .track{height:.85em;background:var(--tan);border-radius:.5em;overflow:hidden}
+.retro-deck .fill{height:100%;width:0;background:var(--teal);border-radius:.5em;transition:width 1.1s cubic-bezier(.22,1,.36,1)}
+.retro-deck .tag{display:inline-block;background:var(--ac,var(--terra));color:var(--card);font-size:.58em;
+padding:.25em .7em;letter-spacing:.15em;margin-top:.8em}
+.retro-deck .callout{background:var(--tan);border-radius:.5em;padding:1em 1.2em;margin-top:1.2em;font-size:.78em;line-height:1.7}
+.retro-deck .callout b.t{color:var(--terra)} .retro-deck .callout b.o{color:var(--olive)}
+.retro-deck .pill{border-left:.4em solid var(--ac,var(--terra))}
+.retro-deck .timeline{margin-top:1.2em;border-left:2px solid var(--line);padding-left:1.3em}
+.retro-deck .timeline .t-item{position:relative;margin-bottom:1em}
+.retro-deck .timeline .t-item::before{content:"";position:absolute;left:-1.62em;top:.3em;width:.7em;height:.7em;
+border-radius:50%;background:var(--ac,var(--olive))}
+.retro-deck .timeline b{font-family:"Noto Serif SC",serif;font-size:.95em}
+.retro-deck .timeline p{color:var(--soft);font-size:.68em;margin:.15em 0 0}
+.retro-deck ul{padding-left:1.1em;margin:.5em 0 0;font-size:.78em;line-height:1.75}
+.retro-deck ul li{margin-bottom:.45em}
+.retro-deck .navbtn{position:absolute;top:50%;transform:translateY(-50%);width:2.6em;height:2.6em;border-radius:50%;
+border:1px solid var(--line);background:var(--card);color:var(--soft);font-size:1em;cursor:pointer;z-index:5;
+transition:all .2s;display:flex;align-items:center;justify-content:center}
+.retro-deck .navbtn:hover{background:var(--terra);color:var(--card);border-color:var(--terra)}
+.retro-deck .prev{left:1%} .retro-deck .next{right:1%}
+.retro-deck .dots{position:absolute;bottom:1.2%;left:50%;transform:translateX(-50%);display:flex;gap:.5em;z-index:5}
+.retro-deck .dots i{width:.55em;height:.55em;border-radius:50%;background:var(--line);cursor:pointer;transition:all .25s}
+.retro-deck .dots i.on{background:var(--terra);transform:scale(1.35)}
+.retro-deck .prog{position:absolute;top:0;left:0;height:.28em;background:var(--terra);width:0;transition:width .4s ease;z-index:6}
+.retro-deck .cover-title{font-size:3.6em;font-weight:700;letter-spacing:.12em;margin:.35em 0 0}
+.retro-deck .cover-sub{color:var(--terra);letter-spacing:.3em;font-size:.85em;margin-top:1em}
+.retro-deck .cover-info{display:flex;gap:3em;margin-top:3em;border-top:1px solid var(--line);padding-top:1.4em}
+.retro-deck .cover-info span{display:block;color:var(--soft);font-size:.62em;letter-spacing:.25em}
+.retro-deck .cover-info b{font-family:"Noto Serif SC",serif;font-size:1em}
+.retro-deck .blocks{position:absolute;right:5.5%;bottom:10%;display:flex;align-items:flex-end;gap:.45em}
+.retro-deck .blocks i{width:1em;display:block}
+</style>
+<div class="retro-deck" id="retroDeck">
+<div class="prog" id="prog"></div>
+
+<!-- 1 封面 -->
+<section class="slide active">
+  <div class="kicker" style="letter-spacing:.3em">SHANGHAI PULMONARY HOSPITAL · FINANCE DEPARTMENT</div>
+  <hr style="width:9em;border:0;border-top:1px solid var(--ink);margin:0">
+  <h1 class="cover-title">财务处工作周报</h1>
+  <div class="cover-sub">科研财务管理岗 · 常规工作纪实</div>
+  <div class="cover-info">
+    <div><span>汇报人</span><b>王菊艳</b></div>
+    <div><span>汇报周期</span><b>2026.10.19 — 10.23</b></div>
+    <div><span>部门</span><b>财务处</b></div>
+  </div>
+  <div class="blocks"><i style="height:2.2em;background:var(--teal)"></i><i style="height:2.9em;background:var(--olive)"></i><i style="height:3.6em;background:var(--mustard)"></i><i style="height:4.3em;background:var(--terra)"></i></div>
+</section>
+
+<!-- 2 本周速览 -->
+<section class="slide">
+  <div class="kicker">WEEKLY HIGHLIGHTS</div>
+  <h2>本周速览</h2><div class="en">AT A GLANCE</div><hr class="rule">
+  <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="card" style="--ac:var(--terra)"><div class="num"><span data-count="119">0</span><small> 单</small></div><div class="lbl">单据财务审核</div><div class="sub">项目费用 100 + 合同付款 19</div></div>
+    <div class="card" style="--ac:var(--mustard)"><div class="num"><span data-count="166">0</span><small> 单</small></div><div class="lbl">窗口报销确认</div><div class="sub">项目费 151 + 合同付款 15</div></div>
+    <div class="card" style="--ac:var(--teal)"><div class="num"><span data-count="568">0</span><small> 张</small></div><div class="lbl">发票查验归档</div><div class="sub">复制入乐享云并逐张查验</div></div>
+    <div class="card" style="--ac:var(--olive)"><div class="num"><span data-count="325">0</span><small> 条</small></div><div class="lbl">劳务信息整理</div><div class="sub">67 单劳务表归并</div></div>
+  </div>
+  <div class="foot"><span>财务处工作周报 · 2026年10月</span><span>02 / 08</span></div>
+</section>
+
+<!-- 3 处理量图表 -->
+<section class="slide">
+  <div class="kicker">WEEKLY VOLUME</div>
+  <h2>单据处理量一览</h2><div class="en" style="color:var(--teal)">PROCESSING VOLUME</div><hr class="rule" style="background:var(--teal)">
+  <div style="margin-top:1.6em" id="bars">
+    <div class="bar-row"><span>发票查验</span><div class="track"><div class="fill" data-val="568"></div></div><span class="val">568</span></div>
+    <div class="bar-row"><span>劳务信息整理</span><div class="track"><div class="fill" data-val="325"></div></div><span class="val">325</span></div>
+    <div class="bar-row"><span>窗口报销</span><div class="track"><div class="fill" data-val="166"></div></div><span class="val">166</span></div>
+    <div class="bar-row"><span>单据审核</span><div class="track"><div class="fill" data-val="119"></div></div><span class="val">119</span></div>
+    <div class="bar-row"><span>业务咨询（周）</span><div class="track"><div class="fill" data-val="50"></div></div><span class="val">50+</span></div>
+    <div class="bar-row"><span>明细账导出</span><div class="track"><div class="fill" data-val="12"></div></div><span class="val">12</span></div>
+    <div class="bar-row"><span>票据开具</span><div class="track"><div class="fill" data-val="7"></div></div><span class="val">7</span></div>
+  </div>
+  <div class="sub" style="margin-top:1em">单位：单 / 张 / 条 · 本周全部完成，无滞后事项</div>
+  <div class="foot"><span>财务处工作周报 · 2026年10月</span><span>03 / 08</span></div>
+</section>
+
+<!-- 4 审核与报销 -->
+<section class="slide">
+  <div class="kicker">REVIEW &amp; REIMBURSEMENT</div>
+  <div style="display:flex;align-items:baseline;gap:.7em"><span class="serif" style="font-size:2.6em;font-weight:700;color:var(--terra)">01</span><h2 style="font-size:1.7em">审核与报销</h2></div>
+  <hr style="border:0;border-top:1px solid var(--line);margin:.9em 0 0">
+  <div style="--ac:var(--terra)">
+    <div class="row"><div class="idx">1</div><div><b>项目费用单据财务审核</b><div class="d">附件与金额审核 · 部门职责 · 已完成</div></div><div class="rnum">100<small> 单</small></div></div>
+    <div class="row"><div class="idx">2</div><div><b>教研类合同付款财务审核</b><div class="d">合同、发票、报告等要素审核 · 已完成</div></div><div class="rnum">19<small> 单</small></div></div>
+    <div class="row"><div class="idx">3</div><div><b>项目费单据窗口报销</b><div class="d">窗口报销确认 · 已完成</div></div><div class="rnum">151<small> 单</small></div></div>
+    <div class="row" style="border-bottom:0"><div class="idx">4</div><div><b>教研类合同付款窗口报销</b><div class="d">窗口附件交付确认 · 已完成</div></div><div class="rnum">15<small> 单</small></div></div>
+  </div>
+  <div class="foot"><span>状态：全部已完成 · 常规工作无考核指标</span><span>04 / 08</span></div>
+</section>
+
+<!-- 5 票据与系统 -->
+<section class="slide">
+  <div class="kicker">INVOICING &amp; SYSTEM SETUP</div>
+  <h2>票据与系统</h2><div class="en" style="color:var(--mustard)">INVOICING &amp; SYSTEM SETUP</div><hr class="rule" style="background:var(--mustard)">
+  <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card" style="--ac:var(--mustard)"><div class="num"><span data-count="7">0</span><small> 张</small></div><div class="lbl">开具票据</div><div class="sub">增值税发票 6 张<br>行政事业单位资金往来票据 1 张</div><div class="tag">月底前完成</div></div>
+    <div class="card" style="--ac:var(--teal)"><div class="num"><span data-count="568">0</span><small> 张</small></div><div class="lbl">发票查验</div><div class="sub">审核环节票据附件复制入乐享云并逐张查验</div><div class="tag" style="--ac:var(--teal)">本周完成</div></div>
+    <div class="card" style="--ac:var(--olive)"><div class="num"><span data-count="1">0</span><small> 个</small></div><div class="lbl">双系统建账</div><div class="sub">金蝶财务系统自定义核算项目建立编码，合同 EAS 系统同步录入</div><div class="tag" style="--ac:var(--olive)">已完成</div></div>
+  </div>
+  <div class="foot"><span>财务处工作周报 · 2026年10月</span><span>05 / 08</span></div>
+</section>
+
+<!-- 6 劳务统计 -->
+<section class="slide">
+  <div class="kicker">SPECIAL TASK · LABOR PAYROLL DATA</div>
+  <h2>劳务统计 · 专项</h2><div class="en" style="color:var(--olive)">SPECIAL TASK</div><hr class="rule" style="background:var(--olive)">
+  <div class="grid" style="grid-template-columns:2fr 3fr;align-items:start">
+    <div class="card" style="--ac:var(--olive)"><div class="num"><span data-count="325">0</span><small> 条</small></div><div class="lbl">劳务信息归并整理</div><div class="sub">复制粘贴 67 单劳务明细表，整理为后续岗位工作需求的表格</div></div>
+    <div>
+      <div class="timeline" style="--ac:var(--olive)">
+        <div class="t-item"><b>每月 20 日</b><p>劳务费收单截止</p></div>
+        <div class="t-item"><b>+1 个工作日</b><p>完成大表交付工资岗位人员</p></div>
+      </div>
+      <div class="callout"><b class="t">存在问题</b>　大量数据归整花费时间较长<br><b class="o">需协调</b>　建议运营管理处增加科研报销系统中劳务附件的弹窗选件功能</div>
+    </div>
+  </div>
+  <div class="foot"><span>财务处工作周报 · 2026年10月</span><span>06 / 08</span></div>
+</section>
+
+<!-- 7 服务与支撑 -->
+<section class="slide">
+  <div class="kicker">SERVICE &amp; SUPPORT</div>
+  <div style="display:flex;align-items:baseline;gap:.7em"><span class="serif" style="font-size:2.6em;font-weight:700;color:var(--teal)">04</span><h2 style="font-size:1.7em">服务与支撑</h2></div>
+  <hr style="border:0;border-top:1px solid var(--line);margin:.9em 0 0">
+  <div style="--ac:var(--teal)">
+    <div class="row"><div class="idx">9</div><div><b>科研业务咨询</b><div class="d">现场 + 电话 + 线上 · 回复科研与开票问询</div></div><div class="rnum">50+<small> 单/周</small></div></div>
+    <div class="row"><div class="idx">10</div><div><b>科研项目财务明细账</b><div class="d">课题中期 / 结题支出明细导出</div></div><div class="rnum">12<small> 单</small></div></div>
+    <div class="row"><div class="idx">11</div><div><b>凭证册抽取</b><div class="d">供课题组财务资料拍摄</div></div><div class="rnum">49<small> 册</small></div></div>
+    <div class="row" style="border-bottom:0"><div class="idx">12</div><div><b>凭证册放回</b><div class="d">曾抽取凭证册归档放回</div></div><div class="rnum">61<small> 册</small></div></div>
+  </div>
+  <div class="foot"><span>注：凭证册管理非本岗位职责，为协助性支撑</span><span>07 / 08</span></div>
+</section>
+
+<!-- 8 问题协调 -->
+<section class="slide">
+  <div class="kicker">ISSUES, ESCALATIONS &amp; UPCOMING</div>
+  <h2>问题协调与下节点</h2><div class="en">ISSUES &amp; NEXT STEPS</div><hr class="rule">
+  <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card pill" style="--ac:var(--terra)"><div class="lbl" style="margin-top:.2em">存在问题</div><div class="en" style="color:var(--terra)">PAIN POINTS</div>
+      <ul><li>劳务数据归整工作量大、耗时较长</li><li>凭证册抽放属协助性工作，非本岗位职责</li></ul></div>
+    <div class="card pill" style="--ac:var(--mustard)"><div class="lbl" style="margin-top:.2em">需院部协调</div><div class="en" style="color:var(--mustard)">NEEDS ESCALATION</div>
+      <ul><li>由运营管理处评估：在科研报销系统增加劳务附件弹窗选件功能，降低人工归整成本</li></ul></div>
+    <div class="card pill" style="--ac:var(--teal)"><div class="lbl" style="margin-top:.2em">时间节点</div><div class="en" style="color:var(--teal)">UPCOMING</div>
+      <ul><li>每月 20 日：劳务费收单截止</li><li>月底前：完成票据开具工作</li></ul></div>
+  </div>
+  <div class="sub" style="margin-top:1.4em">以上事项均已纳入日常跟进 · 如需支持请与财务处科研财管岗联系</div>
+  <div class="foot"><span>财务处工作周报 · 2026年10月</span><span>08 / 08</span></div>
+</section>
+
+<button class="navbtn prev" id="prevBtn">‹</button>
+<button class="navbtn next" id="nextBtn">›</button>
+<div class="dots" id="dots"></div>
+</div>
+<script>
+(function(){
+  var deck=document.getElementById('retroDeck');
+  var slides=[].slice.call(deck.querySelectorAll('.slide'));
+  var dots=document.getElementById('dots'),prog=document.getElementById('prog');
+  var cur=0;
+  slides.forEach(function(_,i){var d=document.createElement('i');if(i===0)d.className='on';
+    d.addEventListener('click',function(){go(i);});dots.appendChild(d);});
+  function animate(slide){
+    slide.querySelectorAll('[data-count]').forEach(function(el){
+      var target=+el.getAttribute('data-count'),t0=null;
+      function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/900,1);
+        el.textContent=Math.round(target*(1-Math.pow(1-p,3)));
+        if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);});
+    slide.querySelectorAll('.fill').forEach(function(f){
+      f.style.width='0';requestAnimationFrame(function(){requestAnimationFrame(function(){
+        f.style.width=Math.max(2.5,(+f.getAttribute('data-val')/568*100))+'%';});});});
+  }
+  function go(i){
+    if(i<0)i=0;if(i>=slides.length)i=slides.length-1;
+    slides.forEach(function(s,k){s.classList.remove('active','exit-left');
+      if(k===i)s.classList.add('active');else if(k<i)s.classList.add('exit-left');});
+    [].forEach.call(dots.children,function(d,k){d.className=k===i?'on':'';});
+    prog.style.width=((i+1)/slides.length*100)+'%';
+    cur=i;animate(slides[i]);
+  }
+  document.getElementById('prevBtn').addEventListener('click',function(){go(cur-1);});
+  document.getElementById('nextBtn').addEventListener('click',function(){go(cur+1);});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(cur+1);}
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();go(cur-1);}});
+  var sx=null;
+  deck.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  deck.addEventListener('touchend',function(e){if(sx===null)return;
+    var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)go(cur+(dx<0?1:-1));sx=null;},{passive:true});
+  prog.style.width=(1/slides.length*100)+'%';
+})();
+</script>
+
+</body>
+</html>
